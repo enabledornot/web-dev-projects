@@ -13,6 +13,16 @@
          font-size: 24px;
       }
   </style>
+  <script>
+   const commonFirstNames = ["John", "Mary", "James", "Jennifer", "Robert", "Linda", "Michael", "Elizabeth", "William", "Susan"];
+   const commonLastNames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia", "Rodriguez", "Martinez"];
+
+   window.onload = function() {
+      const r1 = Math.floor(Math.random() * commonFirstNames.length);
+      const r2 = Math.floor(Math.random() * commonLastNames.length);
+      document.getElementById("name").innerHTML = commonFirstNames[r1] + " " + commonLastNames[r2];
+   }
+</script>
 </head>
 <body>
   <section>
@@ -33,7 +43,7 @@
          <tr>
             <td style="width:50%">
                <h2 margin="0">Photo</h2>
-               <img src="https://thispersondoesnotexist.com/" height="400px">
+               <a href="https://thispersondoesnotexist.com/" target="_blank"><img src="https://thispersondoesnotexist.com/" height="400px"></a>
                <p id="name"></p>
             </td>
             <td style="width:50%">
