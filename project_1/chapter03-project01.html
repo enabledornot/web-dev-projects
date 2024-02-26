@@ -4,14 +4,22 @@
    <meta charset="utf-8">
    <title>Share Your Travels -- New York - Central Park</title>
    <style>
-		/* Light Mode */
+		.zoom {
+			width: fit-content;
+			overflow: hidden;
+		}
+		.zoom img {
+			transition: transform .5s ease;
+		}
+		.zoom:hover img {
+			transform: scale(1.1);
+		}
 		@media (prefers-color-scheme: light) {
             body {
                 background-color: #ffffff;
                 color: #000000;
             }
         }
-        /* Dark Mode */
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #000000;
@@ -48,17 +56,23 @@
 	   taken on October 22, 2011 with a Canon EOS 30D camera. 
 	   </p>
 		<figure>
-		 <a href="images/large-central-park.jpg"><img src="images/central-park.jpg" alt="Central Park" title="Central Park"/></a>
+		<div class="zoom">
+			<a class="zoom" href="images/large-central-park.jpg"><img src="images/central-park.jpg" alt="Central Park"/></a>
+		</div>
 		 <figcaption>Conservatory Pond in Central Park</figcaption>
 		</figure>
 		<p style="display:inline">Options: <img src="images/icon_down.png"> <img src="images/icon_mail.png"></p>
    </section>
    <section>
 		<h3 id="photos">Related Photos</h3>
-		<div style="display:inline">
-			<a href="images/related-large1.jpg"><img src="images/related-square1.jpg" alt="Grass Planes" title="Grass Planes"></a>
-			<a href="images/related-large2.jpg"> <img src="images/related-square2.jpg" alt="Cool Mountans" title="Cool Mountans"> </a>
-			<a href="images/related-large3.jpg"><img src="images/related-square3.jpg" alt="Big Skyscraper" title="Big Skyscraper"> </a>
+		<div class="zoom" style="display:inline-block">
+			<a class="zoom" href="images/related-large1.jpg"><img src="images/related-square1.jpg" alt="Grass Planes" title="Grass Planes"></a>
+		</div>
+		<div class="zoom" style="display:inline-block">
+			<a class="zoom" href="images/related-large2.jpg"> <img src="images/related-square2.jpg" alt="Cool Mountans" title="Cool Mountans"> </a>
+		</div>
+		<div class="zoom" style="display:inline-block">
+			<a class="zoom" href="images/related-large3.jpg"><img src="images/related-square3.jpg" alt="Big Skyscraper" title="Big Skyscraper"> </a>
 		</div>
    </section>
    <section>
