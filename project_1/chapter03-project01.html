@@ -3,10 +3,32 @@
 <head>
    <meta charset="utf-8">
    <title>Share Your Travels -- New York - Central Park</title>
+   <style>
+		/* Light Mode */
+		@media (prefers-color-scheme: light) {
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+        }
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000000;
+                color: #FFA500;
+            }
+            a {
+                color: #3498db;
+            }
+            .inv {
+                filter:invert();
+            }
+        }
+   </style>
 </head>
 <body>
 <header>
-  <h1><img src="images/logo.png" alt="camera icon" title="icon of camera">Share Your Travels</h1>
+  <h1><img class="inv" src="images/logo.png" alt="camera icon" title="icon of camera">Share Your Travels</h1>
   <h2>New York - Central Park</h2>
   <nav>
     <ul>
