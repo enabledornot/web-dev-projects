@@ -12,6 +12,16 @@
          border:solid 1px;
          font-size: 24px;
       }
+      .container {
+         display: inline;
+      }
+      .book {
+         display: inline-block;
+         margin-right: 20px; /* Add spacing between books */
+      }
+      .book img {
+         width: 400px;
+      }
       @media (prefers-color-scheme: light) {
             body {
                 background-color: #ffffff;
@@ -86,18 +96,20 @@
   </div>
   <aside>
      <h3>New Inventory</h3>
-     <div>
-        <img src="images/book1.jpg" alt="book1" >
-        <em>Database Processing</em> by Kroenke, Auer
-     </div>
-     <div>
-        <img src="images/book2.jpg" alt="book2" >
-        <em>Fundamentals of Web Development</em> by Connolly, Hoar
-     </div>
-     <div>
-        <img src="images/book3.jpg" alt="book3" >
-        <em>Basics of Web Design: HTML5 & CSS3</em> by Felke-Morris
-     </div>
+     <div class="container">
+      <div class="book">
+         <img class="book" src="images/book1.png" alt="book1">
+         <p><em>Database Processing</em> by Kroenke, Auer </p>
+      </div>
+      <div class="book">
+         <img class="book" src="images/book2.png" alt="book2">
+         <p><em>Fundamentals of Web Development</em> by Connolly, Hoar </p>
+      </div>
+      <div class="book">
+         <img class="book" src="images/book3.png" alt="book3">
+         <p><em>Basics of Web Design: HTML5 & CSS3</em> by Felke-Morris </p>
+      </div>
+    </div>
    </aside>
   <footer>
      <p><small><a href="#">Home</a> | <a href="#">Catalog</a> | <a href="#">Inventory</a><br/>
