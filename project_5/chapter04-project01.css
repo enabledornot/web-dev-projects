@@ -1,0 +1,29 @@
+/* From Chapter 3 */
+.zoom {
+    width: fit-content;
+    overflow: hidden;
+}
+.zoom img {
+    transition: transform .5s ease;
+}
+.zoom:hover img {
+    transform: scale(1.1);
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #FFA500;
+    }
+    a {
+        color: #3498db;
+    }
+    .inv {
+        filter:invert();
+    }
+}
