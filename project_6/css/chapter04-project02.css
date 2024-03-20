@@ -4,8 +4,14 @@ h1, h2, h3, h4, h5, h6 {
   body, p, td {
     font-family: Roboto, 'Times New Roman', Times, serif;
   }
+
+body a {
+    text-decoration: none;
+}
+
 #mainMenu {
     text-align: right;
+    padding: 5px;
 }
 
 #secondaryMenu {
@@ -21,8 +27,16 @@ ul {
 }
 
 li {
+    padding: 5px;
     display: inline;
-    margin-right: 10px;
+}
+
+li a {
+    color: white;
+}
+
+li:hover {
+    background-color: #4a616d;
 }
 
 header {
