@@ -35,7 +35,7 @@ li a {
     color: white;
 }
 
-li:hover {
+header li:hover {
     background-color: #4a616d;
 }
 
