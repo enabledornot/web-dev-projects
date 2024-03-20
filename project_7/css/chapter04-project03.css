@@ -1,7 +1,77 @@
 h1, h2, h3, h4, h5, h6 {
-    font-family: Roboto, Helvetica, sans-serif;
+    font-family: Merriweather, Helvetica, sans-serif;
 }
 
 body, p, td {
-    font-family: Roboto, 'Times New Roman', Times, serif;
+    font-family: Merriweather, 'Times New Roman', Times, serif;
+    color:white;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: 100%;
+    padding:20px;
+    margin: 40px;
+    background-color: rgba(33,33,33,0.5);
+    width:fit-content;
+}
+
+header, footer {
+    padding: 20px;
+    margin: 40px;
+    background-color: rgba(33,33,33,0.5);
+    width:fit-content;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
+}
+
+main {
+    width:fit-content;
+    background-color: rgba(255,255,255,0.5);
+}
+
+main h2 {
+    color: black;
+    background-color: rgba(224,224,224,0.5);
+    padding: 20px;
+}
+
+#announcement {
+    margin-top: 20px;
+    color: black;
+    margin-left: 20px;
+}
+
+#timeline {
+    padding: 20px;
+    margin: 25px;
+    background-color: rgba(66,66,66,0.5);
+}
+
+#timeline sup {
+    color: red;
+}
+
+#footnote {
+    color: #d88a02;
+    padding: 20px;
+    margin: 25px;
+}
+
+img {
+    width: 250px;
+    height: 400px;
+    border: 1px solid white;
+    padding: 10px;
 }
