@@ -6,6 +6,7 @@
    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
    <link rel="stylesheet" href="css/reset.css" />
    <link rel="stylesheet" href="css/chapter04-project03.css" />
+   <script src="chapter04-project03.js"></script>
 </head>
 <body>
    <header>
@@ -20,11 +21,28 @@
    </main>
   <footer>
         <h2>Recent Acquisitions</h2>
-        <div>
+        <div id="galary">
             <img src="images/07020.jpg" alt="Liberty Leading the People">
             <img src="images/05030.jpg" alt="The Death of Marat">
             <img src="images/106020.jpg" alt="Girl with a Pearl Earring">
         </div>
   </footer>   
+  <main>
+   <h3>Leave a review</h3>
+   <form>
+       <label for="namebox">Name:</label> <input type="text" id="namebox" name="enter your name">
+       <div style="display:inline-block" id="new-review">
+           <img src="images/star-white.png">
+           <img src="images/star-white.png">
+           <img src="images/star-white.png">
+           <img src="images/star-white.png">
+           <img src="images/star-white.png">
+       </div>
+       <br> <br>
+       <textarea id="largebox" rows="3" cols="80"></textarea>
+       <br> <br>
+       <input type="submit" value="Submit">
+   </form>
+  </main>
 </body>
 </html>
