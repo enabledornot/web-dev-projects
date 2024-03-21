@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        filter: invert(1);
+        background-color: #000000;
+    }
+    img {
+        filter: invert(1);
+    }
+}
