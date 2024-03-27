@@ -3,15 +3,31 @@
 
 /* general text formatting */
 
-h1, h2, h3, nav, footer {
+h1, nav, footer {
  font-family: Lobster, Cambria, "Times New Roman", serif;
 }
+
+h2 {
+   font-size: 20px;
+   width: 100%;
+   background-color: #9FA8DA;
+}
+
+label, h3 {
+   margin: 10px;
+}
+
 body {
    font-family: "Open Sans", Verdana, Arial, sans-serif;
    font-size: 100%;
    background-color: #E8EAF6;
+   margin: 10px;
 }
 
+input {
+   width: 98%;
+   text-align:top;
+}
 
 /* header and navigation */
 
@@ -44,6 +60,7 @@ section {
    margin-bottom: 1em;
    padding: 0;
    width: 100%;
+   background-color: #C5CAE9;
 }
 
 
@@ -68,5 +85,10 @@ fieldset {
 form p {
    margin-top: 0.5em;
 }
-
-
+td {
+   border: solid 1px;
+}
+table {
+   width: 100%;
+   border: solid 1px;
+}

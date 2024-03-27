@@ -13,7 +13,72 @@
 </header>
 <main>
    <section>
-   
+      <h2>Photo Details</h2>
+      <form>
+         <label for="title">Title</label> <br>
+         <input type="text" id="title" placeholder="Give your photo a descriptive name"> <br>
+         <label for="description">Description</label> <br>
+         <textarea id="description" name="description" rows="4" style="width:97%">Adding a rich description will help with search results</textarea>
+         <table>
+            <tr>
+               <td rowspan="2">
+                  <label for="continent">Continent</label> <br>
+                  <select id="continent">
+                     <option value="" disabled selected>Please Select a Continent</option>
+                     <option value="NA">North America</option>
+                     <option value="SA">South America</option>
+                     <option value="E">Europe</option>
+                     <option value="A">Asia</option>
+                     <option value="Af">Africa</option>
+                     <option value="AUS">Australia</option>
+                     <option value="ANT">Antartica</option>
+                  </select>
+                  <br>
+                  <label for="country">Country</label> <br>
+                  <select id="country">
+                     <option value="" disabled selected>Please Select a Country</option>
+                     <option value="AMERICA">America</option>
+                     <option value="MEXICO">Mexico</option>
+                     <option value="CANADA">Canada</option>
+                     <option value="ENGLAND">England</option>
+                     <option value="FRANCE">France</option>
+                     <option value="RUSSIA">Russia</option>
+                     <option value="CHINA">China</option>
+                  </select>
+                  <br>
+                  <label for="city">City</label> <br>
+                  <select id="city">
+                     <option value="" disabled selected>Please Select a City</option>
+                     <option value="NEW_YORK">New York</option>
+                     <option value="SAN_DIEGO">San Diego</option>
+                     <option value="LOS_ANGELES">Los Angeles</option>
+                     <option value="NEWERK">Newerk</option>
+                     <option value="TRENTON">Trenton</option>
+                     <option value="SAN_FRANSICO">San Fransico</option>
+                     <option value="ORLANDO">Orlando</option>
+                  </select>
+               </td>
+               <td>
+                  <h3>Copyright?</h3>
+                  <input type="checkbox" id="allright">
+                  <label for="allright">All rights reserved</label>
+                  <input type="checkbox" id="creative">
+                  <label for="creative">Creative Commons</label>
+               </td>
+               <tr>
+                  <td>
+                     <h3>Creative Commons Types</h3>
+                     <input type="checkbox" id="attribution">
+                     <label for="attribution">Attribution</label>
+                     <input type="checkbox" id="noncommercial">
+                     <label for="noncommercial">Noncommercial</label>
+                     <input type="checkbox" id="noderiv">
+                     <label for="noderiv">No Derivative Works</label>
+                  </td>
+               </tr>
+            </tr>
+         </table>
+      </form>
    </section>
 </main>  
 
