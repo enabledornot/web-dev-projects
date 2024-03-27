@@ -69,8 +69,29 @@
     
     <section>
          <h3>Revise</h3>
-          <form>
-
+         <table>
+          <caption>Filter Orders</caption>
+         </table>
+          <form action="process.php" method="post">
+               <label for="name">Customer</label> <br>
+               <input type="text" id="name" name="Enter Name" required> <br>
+               <label for="country">Country</label> <br>
+               <select id="country" name="country">
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+               </select> <br>
+               <label>Status:</label><br>
+               <input type="radio" id="pending" name="status" value="pending" required>
+               <label for="pending">Pending</label>
+               <input type="radio" id="processing" name="status" value="processing">
+               <label for="processing">Processing</label>
+               <input type="radio" id="shipped" name="status" value="shipped">
+               <label for="shipped">Shipped</label><br>
+               <label for="order_date">Order Date:</label><br>
+               <input type="date" id="order_date" name="order_date" required>
+               <br><input type="submit" value="Submit">
           </form>    
     </section>    
 
