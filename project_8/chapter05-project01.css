@@ -23,15 +23,16 @@ section h3 {
     border-radius: 0.25rem;
     padding: 3px;
     color: white;
+    /* width: 100%; */
     
 }
-.status-processing {
+.status.processing {
     background-color:    #E65100;    
 }
-.status-shipped {
+.status.shipped {
     background-color:   #4CAF50;    
 }
-.status-pending {
+.status.pending {
     background-color:    #03A9F4;    
 }
 
@@ -68,3 +69,19 @@ input[type=submit]:hover {
     background-color: #6200EA;
 }
 
+
+
+/* table */
+
+table {
+    width: 100%;
+    margin: 25px;
+}
+
+th {
+    font-weight:bold;
+}
+
+td {
+    text-align: center;
+}
