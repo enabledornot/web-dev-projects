@@ -54,6 +54,7 @@ div#artistBox {
 
 table {
    width: 100%;
+   border-collapse: collapse;
 }
 
 /* td {
@@ -78,8 +79,12 @@ table thead {
     
 }
 
+tbody td {
+   border-top: 2px solid black;
+}
+
 caption {
    background-color: #BDBDBD;
-
+   font-size: 32px;
 }
 
