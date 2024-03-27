@@ -11,10 +11,32 @@
        <legend>Advanced Art Work Search</legend>
 
         <div id="searchBox">
-
+            <input type="text" id="search" placeholder="Search titles" style="margin-left: 20px;">
+            <label>Subject:</label>
+               <input type="radio" id="pending" name="status" value="history" required>
+               <label for="history">History</label>
+               <input type="radio" id="processing" name="status" value="person">
+               <label for="person">Person</label>
+               <input type="radio" id="shipped" name="status" value="landscape">
+               <label for="landscape">Landscape</label>
+            <select id="genre" name="genre">
+                <option value="" disabled selected>Select Genre</option>
+                <option value="romanticsm">Romanticsm</option>
+                <option value="mannerism">Mannerism</option>
+                <option value="realisim">Realisim</option>
+                <option value="neo-classicism">Neo-Classicism</option>
+                <input type="submit" value="filter">
+           </select>
         </div>   
         <div id="settingsBox">
-
+            <select id="bulk" name="bulk" style="margin-left: 20px;">
+                <option value="" disabled selected>Bulk Actions</option>
+                <option value="buy">Buy</option>
+                <option value="edit">Edit</option>
+                <option value="delete">Delete</option>
+                <option value="copy">Copy</option>
+                <input type="submit" value="Apply To All">
+           </select>
         </div>
         <div id="paintingBox">
 
