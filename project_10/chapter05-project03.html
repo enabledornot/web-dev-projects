@@ -5,6 +5,12 @@
    <title>Chapter 5</title>
    <link rel="stylesheet" href="reset.css" />
    <link rel="stylesheet" href="chapter05-project03.css" />
+   <script>
+      function clearform() {
+         var form = document.getElementById("leform")
+         form.reset()
+      }
+   </script>
 </head>
 <body>
 <header>
@@ -14,11 +20,11 @@
 <main>
    <section>
       <h2>Photo Details</h2>
-      <form>
+      <form id="leform">
          <label for="title">Title</label> <br>
-         <input type="text" id="title" placeholder="Give your photo a descriptive name"> <br>
+         <input type="text" id="title" placeholder="Give your photo a descriptive name" style="width:98%"> <br>
          <label for="description">Description</label> <br>
-         <textarea id="description" name="description" rows="4" style="width:97%">Adding a rich description will help with search results</textarea>
+         <textarea id="description" name="description" rows="4" style="width:97%; margin: 10px">Adding a rich description will help with search results</textarea>
          <table>
             <tr>
                <td rowspan="2">
@@ -76,7 +82,31 @@
                      <label for="noderiv">No Derivative Works</label>
                   </td>
                </tr>
+            <tr>
+               <td colspan="2" class="altable">
+                  <label for="accept">I accept the software license</label>
+                  <input type="checkbox" id="accept">
+               </td>
             </tr>
+            <tr>
+               <td>
+                  <label for="rating">Rate this photo:</label> <br>
+                  <input type="number" id="rating" placeholder="0"> <br>
+                  <label for="color">Color Collection:</label> <br>
+                  <input type="color" id="color">
+               </td>
+               <td>
+                  <label for="taken">Date Taken:</label> <br>
+                  <input type="date" id="taken"> <br>
+                  <label for="time">Time Taken:</label> <br>
+                  <input type="time" id="time">
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="altable">
+                  <input type="submit" value="Submit">
+                  <button type="button" onclick="clearform()">Clear Form</button>
+               </td>
          </table>
       </form>
    </section>
