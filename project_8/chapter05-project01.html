@@ -71,10 +71,10 @@
          <h3>Revise</h3>
          <table>
           <caption>Filter Orders</caption>
-         </table>
+         <tr> <td style="text-align:left">
           <form action="process.php" method="post">
                <label for="name">Customer</label> <br>
-               <input type="text" id="name" name="Enter Name" required> <br>
+               <input type="text" id="name" name="Enter Name" placeholder="Enter Name:" required> <br>
                <label for="country">Country</label> <br>
                <select id="country" name="country">
                     <option value="" disabled selected>Select your country</option>
@@ -92,7 +92,9 @@
                <label for="order_date">Order Date:</label><br>
                <input type="date" id="order_date" name="order_date" required>
                <br><input type="submit" value="Submit">
-          </form>    
+          </form> 
+         </td></tr>
+         </table>   
     </section>    
 
 
