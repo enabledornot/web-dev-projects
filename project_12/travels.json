@@ -1,0 +1,18 @@
+{
+    "Canada": {
+        "continent":"North America",
+        "cities":["Calgary","Montreal","Toronto"]
+    },
+    "United States": {
+        "continent":"North America",
+        "cities":["Boston","Chicago","New York","Seattle","Washington"]
+    },
+    "Italy": {
+        "continent":"Europe",
+        "cities":["Florence","Milan","Naples","Rome"]
+    },
+    "Spain": {
+        "continent":"Europe",
+        "cities":["Almeria","Barcelona","Madrid"]
+    }
+}

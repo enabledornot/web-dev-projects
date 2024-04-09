@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width">
+		
+	<title>Chapter 08 - Project 02</title>
+	<link href="css/styles_proj2.css" rel="stylesheet" />
+    <script src="js/data.js" type="text/JavaScript"></script>
+    <script src="js/functions.js" type="text/JavaScript"></script>
+</head>
+
+<body>
+<header>
+    <h2>Share Your Travels</h2>
+</header>
+
+<div class="flex-container justify">
+   {% for travel in travels %}
+    <div class="item">
+       <h2>{{travel}}</h2>
+       <p>{{travels[travel]["continent"]}}</p>
+       <div class="inner-box">
+          <h3>Cities</h3>
+          <ul>
+            {% for city in travels[travel]["cities"] %}
+             <li>{{city}}</li>
+            {% endfor %}
+          </ul>
+       </div>
+       <div class="inner-box">
+          <h3>Popular Photos</h3>
+          {% for image in images[travel] %}
+          <img src="{{image}}" class="photo">
+          {% endfor %}
+       </div>
+       <button>Visit</button>
+    </div>
+   {% endfor %}    
+</div>
+
+
+
+</body>
+</html>
