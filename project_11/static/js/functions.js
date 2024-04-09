@@ -14,9 +14,9 @@ function update_price(id) {
         }
     }
     var subtotal = sum;
-    var tax = subtotal * 1.06;
+    var tax = subtotal * 0.06;
     var shipping = Math.ceil(subtotal/100) * 5;
-    var grandtotal = shipping + tax;
+    var grandtotal = subtotal + shipping + tax;
     document.getElementById("subtotal").innerHTML = "$"+subtotal.toFixed(2);
     document.getElementById("tax").innerHTML = "$"+tax.toFixed(2);
     document.getElementById("shipping").innerHTML = "$"+shipping.toFixed(2);
