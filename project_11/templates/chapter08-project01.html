@@ -4,9 +4,12 @@
 	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width">
 		
 	<title>Chapter 08 - Project 01</title>
-	<link href="css/styles.css" rel="stylesheet" />
+	<link href="css/styles_proj1.css" rel="stylesheet" />
     <script src="js/data.js" type="text/JavaScript"></script>
     <script src="js/functions.js" type="text/JavaScript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,27 +26,29 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><img src="images/106020.jpg"></td>
-            <td>Girl with a Pearl Earring</td>
-            <td>3</td>
-            <td>$80.00</td>
+        {% for painting in paintings %}
+        <tr id="row_{{painting["id"]}}">
+            <td><img src="images/{{painting["image"]}}"></td>
+            <td>{{painting["title"]}}</td>
+            <td>
+                <select onchange="update_price('row_{{painting["id"]}}')">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>                  
+            </td>
+            <td>{{painting["cost"]}}</td>
             <td>$240.00</td>
         </tr>
-        <tr>
-            <td><img src="images/116010.jpg"></td>
-            <td>Artist Holding a Thistle</td>
-            <td>1</td>
-            <td>$125.00.00</td>
-            <td>$125.00</td>
-        </tr>
-        <tr>
-            <td><img src="images/120010.jpg"></td>
-            <td>Portrait of Eleanor of Toledo</td>
-            <td>2</td>
-            <td>$75.00</td>
-            <td>$150.00</td>
-        </tr>        
+        {% endfor %}        
         <tr class="totals">
             <td colspan="4">Subtotal</td>
             <td>$515.00</td>

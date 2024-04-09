@@ -1,0 +1,20 @@
+[
+    {
+        "image":"106020.jpg",
+        "title":"Girl with a Pearl Earring",
+        "cost":"80.00",
+        "id":0
+    },
+    {
+        "image":"116010.jpg",
+        "title":"Artist Holding a Thistle",
+        "cost":"125.00",
+        "id":1
+    },
+    {
+        "image":"120010.jpg",
+        "title":"Portrait of Eleanor of Toledo",
+        "cost":"75.00",
+        "id":2
+    }
+]

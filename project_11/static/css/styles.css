@@ -6,6 +6,36 @@ header h1 span {
     color: #ff6e40;
 }
 
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.title {
+  font-size: 32px;
+}
+
+table {
+  border: solid 3px black;
+}
+
+thead {
+  background-color:#ff6e40;
+}
+
+th {
+  color: white;
+  padding: 10px;
+  border: solid 1px black;
+}
+
+td {
+  border: solid 1px black;
+}
+
+.totals {
+  background-color: aqua;
+}
+
 .profile {
    background-color: #263238;
     display: flex;
