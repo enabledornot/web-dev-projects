@@ -8,7 +8,7 @@ include("rainbowIterator.php");
    <meta charset="utf-8">
    <title>Chapter 11</title>         
     <style>
-        main {
+        div {
            position: relative;   
         }        
         span {
@@ -16,33 +16,34 @@ include("rainbowIterator.php");
             width: 40px;
             border: solid black 1px;
             margin:1px;
-            display: inline-block;
+            position: absolute;
         }
     </style>   
 </head>
 <body>
-<main>
-<?php
-echo "<h1> Using iterator: ".$iterator."</h1>";
+    <div>
+        <?php
 
-$red=$green=$blue=0;
-for ($red=0;$red<255&&$red>=0;$red+=$iterator) {
-    
-	for ($green=0;$green<255&&$green>=0;$green+=$iterator) {
-        
-		for ($blue=0;$blue<255&&$blue>=0;$blue+=$iterator) {
-            
-            $hexColor = "#" . sprintf('%02x',$red) . sprintf('%02x',$green) . sprintf('%02x',$blue);
-            
-            $styleAttribute = "style='background-color: rgb(" . $red . "," . $green . "," . $blue . ")'";
-            $titleAttribute = "title='$hexColor'";
-            echo "<span " . $styleAttribute . " " . $titleAttribute . "></span>	\n";
-				
-		}
-	}
-}
-?>
+    $x=$y=0;
+    for ($dark=0;$dark<20;$dark+=1) {
+        for ($x=0;$x<10;$x+=1) {
+            for ($y=0;$y<10;$y+=1) {
+                $top = $x * 40 + $dark * 35 + 40;
+                $left = $y * 40 + $dark * 35;
+                $red = $dark*5 + ((10-$x) + $y) * 5;
+                $green = $dark*5 + ($x + (10-$y)) * 5;
+                $blue = $dark*5 + ((10-$x) + (10-$y)) * 5;
+                $hexColor = "#" . sprintf('%02x',$red) . sprintf('%02x',$green) . sprintf('%02x',$blue);
+                
+                $styleAttribute = "style='background-color: rgb(" . $red . "," . $green . "," . $blue . "); top: " . $top . "px; left: " . $left . "px;'";
+                $titleAttribute = "title='$hexColor'";
+                echo "<span " . $styleAttribute . " " . $titleAttribute . "></span>	\n";
+            }
+        }
+    }
+    ?>
+    </div>
 
-</main>
+
 </body>
 </html>    
