@@ -25,6 +25,7 @@
 <?php
   include("header.inc.php");
   include("left.inc.php");
+  include("data.inc.php");
 ?>
 
   
@@ -46,11 +47,11 @@
             </div>
             <div class="mdl-card__supporting-text">            
                 <ul class="mdl-list">
-                    <li ><a href="#">Order #500</a></li>
-                    <li><a href="#">Order #510</a></li>
-                    <li><a href="#">Order #520</a></li>
-                    <li><a href="#">Order #530</a></li>
-                    <li><a href="#">Order #540</a></li>                 
+                  <?php
+                    for($c=500;$c<=580;$c+=10) {
+                      echo "<li><a href='#'>Order #" . $c . "</a></li>";
+                    }
+                  ?>           
                 </ul>   
             </div>    
           </div>  <!-- / mdl-cell + mdl-card -->
@@ -76,48 +77,42 @@
                     </tr>
                   </thead>
                   <tfoot>
-                      <tr class="totals">
-                          <td colspan="4">Subtotal</td>
-                          <td>$11650.00</td>
-                      </tr>
-                      <tr class="totals">
-                          <td colspan="4">Shipping</td>
-                          <td>$100.00</td>
-                      </tr> 
-                      <tr class="grandtotals">
-                          <td colspan="4">Grand Total</td>
-                          <td>$12650.00</td>
-                      </tr>                            
+                    <?php
+                      function outputTotalRow($title, $cost, $class) {
+                        echo "<tr class='" . $class . "'>
+                        <td colspan='4'>" . $title . "</td>
+                        <td>$" . number_format($cost,2) . "</td>
+                        </tr> ";
+                      }
+                      $subtotal = $quantity1 * $price1 + $quantity2 * $price2 + $quantity3 * $price3 + $quantity4 * $price4;
+                      if($subtotal > 10000) {
+                        $shipping = 100;
+                      }
+                      else {
+                        $shipping = 200;
+                      }
+                      $total = $subtotal + $shipping;
+                      outputTotalRow("Subtotal",$subtotal, "totals");
+                      outputTotalRow("Shipping",$shipping,"totals");
+                      outputTotalRow("Grand Total",$total,"grandtotals");
+                    ?>                  
                   </tfoot>          
                   <tbody>
-                    <tr>
-                     <td><img src="images/books/tinysquare/0205886159.jpg"></td>
-                      <td class="mdl-data-table__cell--non-numeric">Global Issues, Local Arguments</td>
-                      <td>25</td>
-                      <td>$10.00</td>
-                      <td>$250.00</td>
-                    </tr>
-                    <tr>
-                     <td><img src="images/books/tinysquare/0205875548.jpg"></td>
-                      <td class="mdl-data-table__cell--non-numeric">The Prentice Hall Guide for College Writers</td>
-                      <td>50</td>
-                      <td>$50.00</td>
-                      <td>$2500.00</td>
-                    </tr>
-                    <tr>
-                     <td><img src="images/books/tinysquare/0321826035.jpg"></td>
-                      <td class="mdl-data-table__cell--non-numeric">Introductory and Intermediate Algebra 5e</td>
-                      <td>40</td>
-                      <td>$35.00</td>
-                      <td>$1400.00</td>
-                    </tr>
-                    <tr>
-                     <td><img src="images/books/tinysquare/0205902278.jpg"></td>
-                      <td class="mdl-data-table__cell--non-numeric">Literature and the Writing Process</td>
-                      <td>300</td>
-                      <td>$20.00</td>
-                      <td>$7500.00</td>
-                    </tr>            
+                    <?php
+                      function outputOrderRow($file, $title, $quantity, $price) {
+                        echo "<tr>
+                        <td><img src=images/books/tinysquare/" . $file . "></td>
+                        <td class='mdl-data-table__cell--non-numeric'>" . $title . "</td>
+                        <td>" . $quantity . "</td>
+                        <td>" . number_format($price,2) . "</td>
+                        <td>" . number_format($quantity * $price,2) . "</td>
+                        </tr>";
+                      }
+                      outputOrderRow($file1, $title1, $quantity1, $price1);
+                      outputOrderRow($file2, $title2, $quantity2, $price2);
+                      outputOrderRow($file3, $title3, $quantity3, $price3);
+                      outputOrderRow($file4, $title4, $quantity4, $price4);
+                    ?>       
                   </tbody>
 
                 </table>
